@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+*{margin:0;padding: 0;}
+ul{list-style: none;}
+body{background-color: #abcdef;}
+/*header*/
+#header{width: 900px;height: 80px;font-size: 40px;margin:0 auto;line-height: 80px;text-align: center;}
+/*section*/
+#content{width: 880px;height: 600px;background-color: gray;margin: 0 auto;padding: 10px;}
+#tool{height: 150px;}
+#tool>li{float: left;width: 175px;height: 140px;text-align: center;background-color: #ccc;border-right: 1px solid #fff;}
+#image{text-align:left;padding: 20px;}
+#image li{height: 30px;width:100px;list-style: square inside;}
+#image li button{background-color: gray;border:1px solid #000;padding: 2px 4px;}
+#image li button:hover{background-color: #fff;}
+
+#means,#shape{padding: 20px;}
+#means img,#shape img{height: 20px;width: 20px; margin-top: 4px;}
+#means li,#shape li{height: 30px;width:40px;float: left;border: 1px solid #999;margin-bottom: 10px;}
+#means li:hover,#share li:hover{border: 1px solid #fff;}
+
+#size{padding:10px;}
+#size li{height: 20px;}
+#size li:hover{border: 1px solid #fff;}
+
+#color{padding: 10px;margin-top: 10px;}
+#color li{width: 25px;height: 25px;border:2px solid #ccc;float: left;}
+#red{background-color: red;}
+#green{background-color: green;}
+#blue{background-color: blue;}
+#yellow{background-color: yellow;}
+#white{background-color: white;}
+#black{background-color: black;}
+#pink{background-color: pink;}
+#purple{background-color: purple;}
+#cyan{background-color: cyan;}
+#orange{background-color: orange;}
+
+#canvas{background-color: #fff;}
+/*footer*/
+#footer{width: 900px; height: 30px;margin: 0 auto;text-align: center;line-height: 30px;}
+</style>
+</head>
+<body>
+	
+<header id="header">HTML5在线绘图工具</header>
+<section id="content">
+<form action="http://127.0.0.1/painter/down.php" name="downimg" method="post">
+	<input type="hidden" name="dataurl" value="">
+</form>
+	<!-- 工具区域 -->
+	<ul id="tool">
+		<li>
+			<h3>图像区域</h3>
+			<hr>
+			<ul id="image">
+				<li>
+				<button id="saveimg">保存图片</button></li>
+				<li><button id="clearimg">清空画布</button></li>
+			</ul>
+		</li>
+		<li>
+			<h3>工具</h3>
+			<hr>
+			<ul id="means">
+				<li id="means_brush"><img src="images/Brush.png" alt=""></li>
+				<li id="means_eraser"><img src="images/Eraser.png" alt=""></li>
+				<li id="means_paint"><img src="images/Paint.png" alt=""></li>
+				<li id="means_straw"><img src="images/Straw.png" alt=""></li>
+				<li id="means_text"><img src="images/text.png" alt=""></li>
+				<li id="means_magnifier"><img src="images/Magnifier.png" alt=""></li>
+
+			</ul>
+		</li>
+		<li>
+			<h3>形状</h3>
+			<hr>
+			<ul id="shape">
+				<li id="shape_line"><img src="images/line.png" alt=""></li>
+				<li id="shape_arc"><img src="images/arc.png" alt=""></li>
+				<li id="shape_rect"><img src="images/rect.png" alt=""></li>
+				<li id="shape_poly"><img src="images/poly.png" alt=""></li>
+				<li id="shape_arcfill"><img src="images/arcfill.png" alt=""></li>
+				<li id="shape_rectfill"><img src="images/rectfill.png" alt=""></li>
+			</ul>
+		</li>
+		<li>
+			<h3>线宽</h3>
+			<hr>
+			<ul id="size">
+				<li id="width_1"><img src="images/line1px.png" alt=""></li>
+				<li id="width_3"><img src="images/line3px.png" alt=""></li>
+				<li id="width_5"><img src="images/line5px.png" alt=""></li>
+				<li id="width_8"><img src="images/line8px.png" alt=""></li>
+			</ul>
+		</li>
+		<li>
+			<h3>颜色</h3>
+			<hr>
+			<ul id="color">
+				<li id="red"></li>
+				<li id="green"></li>
+				<li id="blue"></li>
+				<li id="yellow"></li>
+				<li id="white"></li>
+				<li id="black"></li>
+				<li id="pink"></li>
+				<li id="purple"></li>
+				<li id="cyan"></li>
+				<li id="orange"></li>
+			</ul>
+		</li>
+	</ul>
+	<!-- 绘图区域 -->
+	 <canvas id="canvas" width="880" height="400" >no supported</canvas>
+</section>
+<footer id="footer">栗子web工作室</footer>
+
+
+
+<script src="painter.js">
+
+</script>
+</body>
+</html>
