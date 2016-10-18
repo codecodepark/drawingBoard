@@ -1,2 +1,2 @@
 # drawingBoard
-本项目主要由html5的画布标签canvas结合鼠标事件做成，其中下载功能由php实现
+本项目主要由html5的画布标签canvas结合鼠标事件做成，其中下载功能由php实现(位于painter目录内)
